@@ -2,12 +2,12 @@ class Solution {
 
     public ListNode reverse(ListNode head) {
         ListNode prev = null;
-        ListNode curr = head;
-        while(curr != null) {
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+        ListNode current = head;
+        while(current != null) {
+            ListNode next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
         }
         return prev;
     }
