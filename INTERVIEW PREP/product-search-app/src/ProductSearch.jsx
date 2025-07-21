@@ -52,7 +52,7 @@ const ProductSearch = () => {
           ))}
         </div>
       ) : (
-        <p>No products found.</p>
+        <h1>No products found.</h1>
       )}
     </div>
   );
