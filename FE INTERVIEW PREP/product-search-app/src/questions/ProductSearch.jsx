@@ -7,6 +7,10 @@ const ProductSearch = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    if (!query) {
+      setProducts([]);
+      return;
+    }
     const fetchProducts = async () => {
       try {
         const response = await fetch(
@@ -52,7 +56,7 @@ const ProductSearch = () => {
           ))}
         </div>
       ) : (
-        <h1>No products found.</h1>
+        query && <h1>No products found.</h1>
       )}
     </div>
   );
